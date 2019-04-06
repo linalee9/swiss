@@ -3,8 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script src="{{ site.baseurl }}/assets/js/jquery-3.2.1.min.js" ></script>
+  <script defer=true src="{{ site.baseurl }}/assets/katex/katex_init.js"></script>
+
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/katex/katex.min.css">
 
   {% assign user_url = site.url | append: site.baseurl %}
   {% assign full_base_url = user_url | default: site.github.url %}
@@ -14,4 +19,8 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <script src="{{ site.baseurl }}/assets/katex/katex.min.js"></script>
+  <script defer src="{{ site.baseurl }}/assets/katex/contrib/auto-render.js"
+        onload="renderMathInElement(document.body);"></script>
 </head>
