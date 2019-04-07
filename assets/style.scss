@@ -7,3 +7,15 @@
 @import
         "theme-{{ site.theme_color | default: "black" }}.scss"
 ;
+
+.math-display {
+        line-height: 1.5;
+        margin-bottom: 1em;
+        display: inline-block;
+        width: 100%;
+        font: normal 1.4em KaTeX_Main, Times New Roman, serif;
+        line-height: 1.2;
+        text-indent: 0;
+        text-rendering: auto;
+        text-align: center;
+}
