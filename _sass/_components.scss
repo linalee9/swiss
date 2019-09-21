@@ -19,8 +19,8 @@ code {
 .prose {
 
   a {
-    text-decoration: underline dotted;
-
+    text-decoration: dashed underline;
+ 
     &:hover {
       text-decoration: underline;
     }
@@ -33,6 +33,15 @@ code {
 
     @media (min-width: $breakpoint-lg) {
       width: (10 / 12 * 100%); // matches col-10
+    }
+
+    a {
+      color: $color-text-accent;
+      text-decoration: underline;
+ 
+      &:hover {
+      text-decoration: underline;
+      }
     }
 
   }
